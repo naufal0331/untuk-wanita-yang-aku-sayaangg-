@@ -6,60 +6,79 @@
     <title>Untuk Wanita yang Aku Sayang</title>
     <style>
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #fff5f7; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        .carousel { position: relative; width: 80%; max-width: 600px; height: 500px; overflow: hidden; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .slide { position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; opacity: 0; transition: opacity 1s ease-in-out; box-sizing: border-box; }
-        .slide.active { opacity: 1; }
-        h2 { color: #d63384; margin-bottom: 10px; }
-        p { color: #555; font-size: 1rem; line-height: 1.4; margin-bottom: 15px; }
-        .slide img { width: 80%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
         
-        .nav { position: absolute; bottom: 30px; width: 100%; display: flex; justify-content: center; gap: 20px; }
-        button { cursor: pointer; padding: 12px 25px; background: #d63384; border: none; color: white; border-radius: 25px; font-weight: bold; transition: transform 0.3s ease, background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        button:hover { background: #b02a6c; transform: scale(1.1); }
-        button:active { transform: scale(0.95); }
+        .carousel { position: relative; width: 90%; max-width: 500px; height: 80vh; max-height: 600px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; flex-direction: column; overflow: hidden; }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+        .slide { position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; opacity: 0; transition: opacity 0.5s ease-in-out; box-sizing: border-box; pointer-events: none; }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        
+        /* Slide Penutup Scrollable */
+        .slide.scrollable { overflow-y: auto; justify-content: flex-start; }
+        
+        h2 { color: #d63384; margin-bottom: 15px; }
+        p { color: #555; font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
+        .slide img { width: 90%; max-height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        
+        /* Tombol di dalam kotak */
+        .nav { padding: 20px; display: flex; justify-content: center; gap: 10px; background: white; }
+        button { cursor: pointer; padding: 10px 20px; background: #d63384; border: none; color: white; border-radius: 20px; font-weight: bold; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        button:hover { transform: scale(1.05); }
+        
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
         .animate-pulse { animation: pulse 2s infinite; }
     </style>
 </head>
 <body>
 
 <div class="carousel" id="carousel">
+    <!-- Slide Awalan -->
     <div class="slide active">
+        <h2>Halo Sayang</h2>
+        <p>Aku punya sesuatu yang spesial untuk kamu. Klik tombol di bawah ya untuk melihatnya.</p>
+    </div>
+    
+    <!-- Slide Pesan & Foto -->
+    <div class="slide">
         <h2>Moment yang aku inginkan</h2>
         <img src="foto1.jpeg" alt="Foto 1">
-        <p>Aku sangat bersyukur bisa bertemu dengan wanita sepertimu. Kehadiranmu membawa warna baru di hidupku.</p>
+        <p>Aku sangat bersyukur bisa bertemu dengan wanita sepertimu.</p>
     </div>
+    
     <div class="slide">
-        <h2>Princess akuuu</h2>
+        <h2>Princesss akuuu</h2>
         <img src="foto2.jpeg" alt="Foto 2">
-        <p>Bersyukur banget Tuhan mempertemukan aku dengan wanita sehebat dan sebaik kamu.</p>
+        <p>Terima kasih sudah menjadi bagian terindah dalam hidupku.</p>
     </div>
-    <div class="slide">
+
+     <div class="slide">
         <h2>Kesayangan akuuu</h2>
         <img src="foto3.jpeg" alt="Foto 3">
-        <p>Bertemu denganmu adalah anugerah terbesar. Kamu jawaban dari doa-doaku.</p>
+        <p>Bertemu denganmu adalah anugerah terindah. Kamu jawaban dari doa-doaku.</p>
     </div>
-    <div class="slide">
+    
+     <div class="slide">
         <h2>My loveee</h2>
         <img src="foto4.jpeg" alt="Foto 4">
-        <p>Terima kasih sudah menjadi bagian terindah dalam hidupku. Aku sangat menghargaimu.</p>
+        <p>Terima kasih sudah menjadi bagian terindah dalam hidupku. Aku sangat sayangg kamuu.</p>
     </div>
-    <div class="slide">
-        <h2>Untuk Kamu</h2>
-        <p>sayang, makasih yah udah bertahan sama aku, aku harap kita bisa selalu besama yah, dan aku harap kamu dan aku tetap selalu bersama kedepan nya dan selamanya, makasih udah sama laki laki yang banyak kurang nya ini aku harap kamu bisa bertahan sama aku yah, dengan datang nya kamu di kehidupan aku, aku merasa semua jauh lebih baik dari sebelum nya, aku harap masa kita berdua gak akan ada habis nya yah sayang, terus terus sama aku yah sayang selamanyaa oteyyy, akuu sayangg bangett sama kamuu, aku gamau kehilangan kamuu, makasihh sudah dateng kedalam hidup kuu, makasih sudah ngebikin aku merasa di sayang dan di peduliin banget, aku janji aku akan bahagia in kamu dan aku gak akan ninggalin kamu dalam. keadaan apapun, aku janji aku bakal berusaha dan berjuang untuk wanita yang menemanim aku saat inii, tetap jadii wanita kesayangan aku yahh sayangg, akuu sayang banget sama kamu, jangan pergi dari aku yahhh, 
-i love you....
-            Terima kasih sudah meluangkan waktu untuk membaca ini. Kamu sangat berarti bagiku, hari ini dan selamanya.</p>
+    
+    
+    <!-- Slide Terakhir (Scrollable) -->
+    <div class="slide scrollable">
+        <h2>Pesan Terakhir</h2>
+        <p>Ini adalah baris pesan yang sangat panjang agar kamu bisa merasakan pengalaman scroll di hp kamu. <br><br>
+        Kamu adalah segalanya bagiku. Aku sangat menghargai setiap momen yang kita lalui bersama, dari tawa hingga air mata. Semoga kita selalu bersama dalam segala kondisi apapun.<br><br>
+        Tetaplah jadi wanita yang baik dan hebat seperti sekarang.<br><br>
+        Aku sayang sekali sama kamu!<br><br>
+        Selamanya...
+        </p>
     </div>
-</div>
-
-<div class="nav">
-    <button onclick="prevSlide()" class="animate-pulse">Sebelumnya</button>
-    <button onclick="nextSlide()" class="animate-pulse">Selanjutnya</button>
+    
+    <!-- Tombol di dalam kotak -->
+    <div class="nav">
+        <button onclick="prevSlide()" class="animate-pulse">Kembali</button>
+        <button onclick="nextSlide()" class="animate-pulse">Lanjut</button>
+    </div>
 </div>
 
 <script>
